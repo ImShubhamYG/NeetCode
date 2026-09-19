@@ -3,18 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DSA Track — NeetCode + GFG</title>
+<title>DSA Tracker</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23181f2a'/%3E%3Cpath d='M18 34.5 27 43l19-22' fill='none' stroke='%2378a9ff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='18' cy='34.5' r='4' fill='%2330d6a2'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#111821">
 <style>
 :root{
-  --bg:#06080c;--panel:#0d1219;--panel2:#101823;--line:#273246;
-  --text:#f4f7fb;--muted:#8d9aad;--cyan:#49c8ff;--green:#31d17c;
+  --bg:#11161d;--panel:#171d25;--panel2:#1c232d;--line:#2c3746;
+  --text:#edf2f7;--muted:#a4afbd;--cyan:#78a9ff;--green:#35d4a2;
   --shadow:0 18px 45px rgba(0,0,0,.30);
   --soft:rgba(255,255,255,.035);
   --row-border:#1b2330;
 }
 body[data-theme="light"]{
-  --bg:#f4f7fb;--panel:#ffffff;--panel2:#f8fafc;--line:#d8e0ea;
-  --text:#172033;--muted:#607086;--cyan:#1388c9;--green:#159b55;
+  --bg:#f5f7fa;--panel:#ffffff;--panel2:#f8fafc;--line:#d9e1ea;
+  --text:#19212c;--muted:#667587;--cyan:#2f70c9;--green:#168a69;
   --shadow:0 16px 40px rgba(32,58,89,.10);
   --soft:rgba(15,35,60,.035);
   --row-border:#e5eaf1;
@@ -24,45 +26,45 @@ html{color-scheme:dark;scroll-behavior:smooth}
 html:has(body[data-theme="light"]){color-scheme:light}
 body{
   margin:0;min-height:100vh;
-  background:radial-gradient(circle at 50% -10%,#172333 0,#06080c 44%,#06080c 100%);
+  background:radial-gradient(circle at 50% -10%,#253141 0,#11161d 46%,#0d1218 100%);
   color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
   transition:background .2s ease,color .2s ease
 }
 body[data-theme="light"]{
-  background:radial-gradient(circle at 50% -10%,#e7f1fa 0,#f4f7fb 42%,#f4f7fb 100%);
+  background:radial-gradient(circle at 50% -10%,#e7eef6 0,#f5f7fa 42%,#f5f7fa 100%);
 }
 .wrap{max-width:1380px;margin:auto;padding:20px clamp(14px,2.5vw,30px) 60px}
 .top{
   position:sticky;top:8px;z-index:50;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
-  padding:10px;margin-bottom:18px;background:rgba(7,10,15,.88);
+  padding:10px;margin-bottom:18px;background:rgba(17,22,29,.90);
   border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(14px);box-shadow:var(--shadow)
 }
 .logo{font-weight:900;letter-spacing:.3px}
 .spacer{flex:1}
 .select,.btn{
-  border:1px solid #344158;border-radius:10px;background:#0e151e;color:#e9eef6;
+  border:1px solid #394654;border-radius:10px;background:#1b222b;color:#e8eef5;
   padding:9px 12px;font:inherit;font-weight:750;transition:.16s ease
 }
 body[data-theme="light"] .top{background:rgba(255,255,255,.88)}
 body[data-theme="light"] .select,body[data-theme="light"] .btn{background:#fff;color:#172033;border-color:#ccd6e2}
 .select{min-width:215px}.btn{cursor:pointer}
-.btn:hover,.select:hover{background:#16202b;transform:translateY(-1px)}
-body[data-theme="light"] .btn:hover,body[data-theme="light"] .select:hover{background:#f1f6fa}
+.btn:hover,.select:hover{background:#232d39;transform:translateY(-1px)}
+body[data-theme="light"] .btn:hover,body[data-theme="light"] .select:hover{background:#eef3f8}
 .btn.active{border-color:var(--cyan);background:#172637;color:#fff}
 .navs{display:flex;gap:8px;align-items:center}
 .view{display:none}.view.active{display:block}
 h1{font-size:30px;text-align:center;margin:7px 0 5px}
 .subtitle{color:var(--muted);text-align:center;margin:0 0 18px}
 .one-note{
-  padding:10px 12px;border:1px solid #2b3749;border-radius:10px;background:#0d151f;
+  padding:10px 12px;border:1px solid #334050;border-radius:10px;background:#171f28;
   color:#9eacbf;font-size:12px;text-align:center;margin-bottom:14px
 }
 body[data-theme="light"] .one-note{background:#f8fafc;border-color:#d8e0ea;color:#64748a}
 .section{
-  border:1px solid var(--line);background:rgba(13,18,25,.96);
+  border:1px solid var(--line);background:rgba(23,29,37,.97);
   border-radius:15px;overflow:hidden;margin:10px 0;box-shadow:0 10px 24px rgba(0,0,0,.10)
 }
-body[data-theme="light"] .section{background:rgba(255,255,255,.96);box-shadow:0 10px 24px rgba(32,58,89,.06)}
+body[data-theme="light"] .section{background:rgba(255,255,255,.98);box-shadow:0 10px 24px rgba(32,58,89,.06)}
 body[data-theme="light"] .roadmap-shell{background:rgba(255,255,255,.96)}
 body[data-theme="light"] .site-footer{border-top-color:#d8e0ea;color:#6a7789}
 body[data-theme="light"] .site-footer strong{color:#243247}
@@ -87,8 +89,8 @@ body[data-theme="light"] .footer-right{color:#7d8998}
 .row:hover{background:var(--soft)}
 .problem.solved .row{background:rgba(0,0,0,.18);opacity:.58}
 body[data-theme="light"] .problem.solved .row{background:rgba(25,42,61,.055)}
-.problem.solved .problem-link{text-decoration:line-through;color:#687487}
-.problem.solved .problem-link:hover{text-decoration:line-through}
+.problem.solved .problem-link{color:#687487}
+.problem.solved .problem-link:hover{text-decoration:none}
 .problem.solved .diff{filter:grayscale(.5)}
 .problem.solved .tick.done{box-shadow:none}
 .tick{position:relative}
@@ -235,7 +237,7 @@ body[data-theme="light"] .text-input{background:#fff;color:#172033}
 .stat{border:1px solid #263348;border-radius:14px;background:linear-gradient(180deg,#101823,#0b1118);padding:14px 15px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
 body[data-theme="light"] .stat{background:linear-gradient(180deg,#fff,#f7faff);border-color:#d8e0ea;box-shadow:0 10px 24px rgba(32,58,89,.07)}
 .stat-label{font-size:11px;color:#7e8ca0;text-transform:uppercase;letter-spacing:.7px;font-weight:800}.stat-value{margin-top:3px;font-size:19px;font-weight:900}.stat-sub{font-size:10px;color:#69778b;margin-top:3px}
-.progress-wide{position:relative;height:11px;border-radius:999px;background:#1a2230;overflow:hidden;margin-top:11px;border:1px solid rgba(255,255,255,.06)}
+.progress-wide{position:relative;height:11px;border-radius:999px;background:#232c37;overflow:hidden;margin-top:11px;border:1px solid rgba(255,255,255,.06)}
 .progress-wide .fill{height:100%;width:0;background:linear-gradient(90deg,#31d17c,#7cf6ae);border-radius:999px;transition:width .25s ease;box-shadow:0 0 16px rgba(49,209,124,.35)}
 body[data-theme="light"] .progress-wide{background:#e7edf4;border-color:#d5dee8}
 body[data-theme="light"] .progress-wide .fill{background:linear-gradient(90deg,#159b55,#36cf7b);box-shadow:0 0 14px rgba(21,155,85,.20)}
@@ -260,6 +262,12 @@ body[data-theme="light"] .progress-hero-meta{color:#6a7789}
 @media(max-width:800px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.stats{grid-template-columns:1fr 1fr}.stat-value{font-size:17px}.site-footer{display:block}.footer-right{margin-top:5px}}
 
+.header-favicon{width:22px;height:22px;border-radius:7px;display:inline-grid;place-items:center;background:#273244;border:1px solid #3a4a60;color:#78a9ff;font-size:13px;font-weight:950;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03)}
+body[data-theme="light"] .header-favicon{background:#eef3f8;border-color:#cbd8e4;color:#2f70c9}
+/* Compact profile button */
+.profile-icon-only{min-width:42px;width:42px;height:42px;padding:5px;justify-content:center;border-radius:50%;}
+.profile-icon-only .avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:16px;background:#26303c;border:1px solid #3c4a5b}
+body[data-theme="light"] .profile-icon-only .avatar{background:#eef3f7;border-color:#cfd9e4}
 /* Premium profile + roadmap controls */
 .profile-btn{display:flex;align-items:center;gap:9px;min-width:170px;padding:6px 9px;border:1px solid var(--line);border-radius:13px;background:var(--panel2);color:var(--text);cursor:pointer;transition:.16s ease}
 .profile-btn:hover{transform:translateY(-1px);border-color:#4b5e78;background:var(--soft)}
@@ -280,7 +288,7 @@ body[data-theme="light"] .progress-hero-meta{color:#6a7789}
 .profile-github-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.profile-github-title{font-weight:900;font-size:13px}.profile-github-status{font-size:10px;color:var(--muted);margin-top:3px}.status-dot{width:10px;height:10px;border-radius:50%;background:#69778b;box-shadow:0 0 0 3px rgba(105,119,139,.10)}.status-dot.connected{background:var(--green);box-shadow:0 0 0 3px rgba(49,209,124,.12)}
 .profile-github-user{margin:12px 0;font-size:11px;color:var(--muted);padding:10px;border-radius:10px;background:var(--soft);word-break:break-word}.profile-github-actions{display:flex;gap:8px}.profile-github-actions .btn{flex:1}
 .roadmap-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 10px;margin:-2px 0 10px;border:1px solid var(--line);border-radius:13px;background:var(--panel);box-shadow:var(--shadow)}
-.zoom-label{font-size:11px;color:var(--muted);font-weight:800}.zoom-controls{display:flex;align-items:center;gap:6px}.zoom-btn{min-width:34px;height:31px;padding:0 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--text);font-weight:900;cursor:pointer}.zoom-btn:hover{border-color:#52657f;transform:translateY(-1px)}.zoom-value{width:54px;text-align:center;font-size:11px;font-weight:900;color:var(--cyan)}.zoom-fit{min-width:42px}.roadmap-shell{overflow:auto;position:relative;min-height:420px;max-height:calc(100vh - 230px);scroll-behavior:smooth}.roadmap-stage{position:relative;transform-origin:top left;transition:width .18s ease,height .18s ease}.roadmap-canvas{width:1180px;height:1120px;min-width:1180px;position:relative;margin:0}.connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.connections path{fill:none;stroke:#dfe7f1;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.82}.node-card{width:150px;min-height:62px;border:1px solid rgba(255,255,255,.08);border-radius:13px;color:#fff;background:linear-gradient(180deg,#4567df,#3759cf);box-shadow:0 9px 20px rgba(0,0,0,.23);cursor:pointer;padding:9px;text-align:center;font:800 12px/1.15 Inter,Segoe UI,Arial,sans-serif;transition:transform .15s ease,filter .15s ease,box-shadow .15s ease}.node-card:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.30)}.node-card.magenta{background:linear-gradient(180deg,#c244b4,#a92c98)}.node-card .bar{margin-top:8px;height:5px;border-radius:99px;background:rgba(255,255,255,.30);overflow:hidden}.node-card .fill{height:100%;background:#41e886;width:0}.node-card .meta{margin-top:5px;font-size:9px;color:#edf4ff;font-weight:700}
+.zoom-label{font-size:11px;color:var(--muted);font-weight:800}.zoom-controls{display:flex;align-items:center;gap:6px}.zoom-btn{min-width:34px;height:31px;padding:0 9px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--text);font-weight:900;cursor:pointer}.zoom-btn:hover{border-color:#52657f;transform:translateY(-1px)}.zoom-value{width:54px;text-align:center;font-size:11px;font-weight:900;color:var(--cyan)}.zoom-fit{min-width:42px}.roadmap-shell{overflow:auto;position:relative;min-height:420px;max-height:calc(100vh - 230px);scroll-behavior:smooth}.roadmap-stage{position:relative;transform-origin:top left;transition:width .18s ease,height .18s ease}.roadmap-canvas{width:1180px;height:1120px;min-width:1180px;position:relative;margin:0}.connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.connections path{fill:none;stroke:#8f9dad;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:.82}.node-card{width:150px;min-height:62px;border:1px solid rgba(255,255,255,.10);border-radius:13px;color:#fff;background:linear-gradient(180deg,#5f7fd1,#4668b7);box-shadow:0 9px 20px rgba(0,0,0,.23);cursor:pointer;padding:9px;text-align:center;font:800 12px/1.15 Inter,Segoe UI,Arial,sans-serif;transition:transform .15s ease,filter .15s ease,box-shadow .15s ease}.node-card:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.30)}.node-card.magenta{background:linear-gradient(180deg,#8f64c9,#7042a8)}.node-card .bar{margin-top:8px;height:5px;border-radius:99px;background:rgba(255,255,255,.30);overflow:hidden}.node-card .fill{height:100%;background:#59ddb6;width:0}.node-card .meta{margin-top:5px;font-size:9px;color:#edf4ff;font-weight:700}
 body[data-theme="light"] .profile-btn,body[data-theme="light"] .roadmap-toolbar{background:#fff}body[data-theme="light"] .profile-card{background:#fff}body[data-theme="light"] .profile-avatar-large{background:linear-gradient(135deg,#eaf4fb,#dbeaf5);border-color:#c3d6e4}body[data-theme="light"] .avatar{background:#eef5fa;border-color:#ccd9e5}
 @media(max-width:800px){.profile-btn{min-width:42px;padding:6px}.profile-mini,.chev{display:none}.profile-overlay{padding:66px 10px 10px}.profile-card{width:min(430px,calc(100vw - 20px))}.roadmap-toolbar{align-items:flex-start;flex-direction:column}.zoom-controls{width:100%;justify-content:flex-end}.roadmap-shell{max-height:calc(100vh - 260px)}}
 @media(max-width:520px){.zoom-label{display:none}.zoom-controls{justify-content:space-between}.zoom-btn{flex:1}.zoom-value{flex:0 0 50px}}
@@ -312,7 +320,7 @@ body[data-theme="light"] .cal-day.active{background:rgba(21,155,85,.11);color:#1
 <div class="wrap">
 
 <div class="top">
-  <div class="logo">DSA Track</div>
+  <div class="logo"><span class="header-favicon" aria-hidden="true">✓</span>DSA Tracker</div>
   <div class="navs">
     <button class="btn nav active" data-view="tracker">📝 Problems</button>
     <button class="btn nav" data-view="roadmap">🌳 Roadmap</button>
@@ -324,10 +332,8 @@ body[data-theme="light"] .cal-day.active{background:rgba(21,155,85,.11);color:#1
     <option value="150">NeetCode 150 — 150</option>
     <option value="75">Blind 75 — 75</option>
   </select>
-  <button class="profile-btn" id="profileButton" type="button" aria-label="Open profile and GitHub settings" title="Profile & GitHub settings">
+  <button class="profile-btn profile-icon-only" id="profileButton" type="button" aria-label="Open profile and GitHub settings" title="Profile & GitHub settings">
     <span class="avatar" id="profileAvatar">👤</span>
-    <span class="profile-mini"><strong id="profileMiniName">Profile</strong><small id="profileMiniStatus">GitHub not connected</small></span>
-    <span class="chev">⌄</span>
   </button>
   <button class="btn theme-btn" id="themeToggle" type="button" aria-label="Toggle color mode">☀️ Light</button>
 </div>
